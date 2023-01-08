@@ -1,0 +1,38 @@
+nav {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.bt_index,
+.bt_about,
+.bt_portfolio,
+.bt_contact {
+  cursor: pointer;
+  width: 80%;
+
+}
+
+.bt_index {
+
+  grid-column: 1 / 2;
+}
+
+.bt_about {
+
+  grid-column: 5 / 6;
+}
+
+.bt_portfolio {
+
+  grid-column: 6 / 7;
+}
+
+.bt_contact {
+
+  grid-column: 7 / 8;
+}
+
+.clicked {
+  background-color: gray;
+  color: white;
+}

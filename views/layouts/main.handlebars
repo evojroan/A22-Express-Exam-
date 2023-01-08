@@ -1,0 +1,44 @@
+<!-- ./views/layouts/main.handlebars -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+
+</head>
+
+<body>
+  <nav>
+
+    <input type=button onClick="location.href='http://localhost:3000/'" value='回到首頁' class="bt_index button">
+    {{!-- <button class="bt_about"><a href="http://localhost:3000/about">About</a></button> --}}
+    <input type=button onClick="location.href='http://localhost:3000/about'" value='About' class="bt_about button">
+    <input type=button onClick="location.href='http://localhost:3000/portfolio'" value='Portfolio'
+      class="bt_portfolio button">
+    <input type=button onClick="location.href='http://localhost:3000/contact'" value='Contact'
+      class="bt_contact button">
+  </nav>
+  <!-- partial templates will replace the part of "body" here -->
+  {{{ body }}}
+  <script src="/javascripts/button_script.js"></script>
+
+
+  <script>
+    const buttons = document.querySelectorAll('.button');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', function () {
+        // 把所有按鈕的顏色消除
+        ;
+        // 把當前按鈕改色
+        button.classList.add('clicked');
+      });
+    });
+  </script>
+</body>
+
+</html>
