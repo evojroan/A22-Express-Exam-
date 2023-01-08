@@ -33,7 +33,7 @@
     buttons.forEach(button => {
       button.addEventListener('click', function () {
         // 把所有按鈕的顏色消除
-        ;
+        button.forEach(button => { button.classList.remove('clicked') });
         // 把當前按鈕改色
         button.classList.add('clicked');
       });
